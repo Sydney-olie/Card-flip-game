@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+
+<body>
+  <header class="header">
+  <div class="left-icon">⋮</div>
+  <div class="title">Loyalty Program</div>
+  <div class="menu">📩</div>
+</header>
+
+ <div class="sub-heading">
+  <p>19th March 2026, Thursday</p>
+  <h2>Congratulations!</h2>
+  <p>Today you are lucky!</p>
+ </div>
+ <p>On Thursday we choose 7 users <b>Chrome</b>, to give them the chance to win gifts from our sponsors. Select card to see what you get!</p>
+
+ <div id="reload" class="reload">
+  <div class="reload-content">
+    <h2>🎉 Congratulations!</h2>
+    <p>You have been selected!</p>
+
+    <p><strong>IP:</strong> <span id="ip">Loading...</span></p>
+    <p><strong>Device:</strong> Mobile</p>
+    <p><strong>Browser:</strong> Chrome</p>
+
+    <button id="okBtn">OK</button>
+  </div>
+ </div>
+
+<div class="grid">
+
+  <!-- CARD (repeat this 9 times) -->
+  <div class="card" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="WhatsApp Image 2026-03-24 at 8.28.26 AM.jpeg" alt="reward">
+    </div>
+    <div class="card-back">
+      <img class="result-img" src="" />
+    </div>
+  </div>
+  </div>
+
+  <div class="card" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="WhatsApp Image 2026-03-24 at 8.28.26 AM.jpeg" alt="reward">
+    </div>
+    <div class="card-back">
+      <img class="result-img" src="" />
+    </div>
+  </div>
+  </div>
+
+   <div class="card" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="WhatsApp Image 2026-03-24 at 8.28.26 AM.jpeg" alt="reward">
+    </div>
+    <div class="card-back">
+      <img class="result-img" src="" />
+    </div>
+  </div>
+  </div>
+
+   <div class="card" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="WhatsApp Image 2026-03-24 at 8.28.26 AM.jpeg" alt="reward">
+    </div>
+    <div class="card-back">
+      <img class="result-img" src="" />
+    </div>
+  </div>
+  </div>
+
+   <div class="card" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="WhatsApp Image 2026-03-24 at 8.28.26 AM.jpeg" alt="reward">
+    </div>
+    <div class="card-back">
+      <img class="result-img" src="" />
+    </div>
+  </div>
+  </div>
+
+   <div class="card" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="WhatsApp Image 2026-03-24 at 8.28.26 AM.jpeg" alt="reward">
+    </div>
+    <div class="card-back">
+      <img class="result-img" src="" />
+    </div>
+  </div>
+  </div>
+
+   <div class="card" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="WhatsApp Image 2026-03-24 at 8.28.26 AM.jpeg" alt="reward">
+    </div>
+    <div class="card-back">
+      <img class="result-img" src="" />
+    </div>
+  </div>
+  </div>
+
+   <div class="card" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="WhatsApp Image 2026-03-24 at 8.28.26 AM.jpeg" alt="reward">
+    </div>
+    <div class="card-back">
+      <img class="result-img" src="" />
+    </div>
+  </div>
+  </div>
+
+   <div class="card" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="WhatsApp Image 2026-03-24 at 8.28.26 AM.jpeg" alt="reward">
+    </div>
+    <div class="card-back">
+      <img class="result-img" src="" />
+    </div>
+  </div>
+  </div>
+
+  <div id="popup" class="popup">
+  <div class="popup-content">
+    <h3>🎉 Congratulations!<div class="highlight">100.00 PKR</div> almost yours!</h3>
+    <p>1. click the "proceed" button</p>
+    <p>2. Confirm your delivery</p>
+    <h5><b><div class="highlight">Important: Hurry, limited quantities only.</div></b></h5>
+    <h5>you only have 4 minutes to claim your prize!</h5>
+    <p>You have won 🎁</p>
+    <button id="closeBtn">Proceed</button>
+  </div>
+</div>
+
+<div id="Try-again" class="Try-again">
+  <div class="Try-again-content">
+    <p>Oops! You have one more try.</p>
+    <button id="retryBtn">OK</button>
+  </div>
+</div>
+  
+
+
+  <script src="script.js"></script>
+</body>
+</html>

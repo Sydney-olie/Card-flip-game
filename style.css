@@ -1,0 +1,266 @@
+body {
+  background: black;
+  color: white;
+  text-align: center;
+  font-family: Arial;
+   margin: 0;
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: auto;
+
+}
+
+/* Header styling */
+.header {
+  background-color: rgb(20, 20, 156);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 20px;
+   width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ✅ GRID: 3 columns, 3 rows */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 20px 5px 20px 15px;
+  box-sizing: border-box;
+}
+
+/* Card container */
+.card {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  height: 200px;
+  max-width: 180px;
+  perspective: 1000px;
+}
+
+/* Inner flip element */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+/* Flip happens here */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & back */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+/* FRONT (covered card) */
+.card-front {
+  background: linear-gradient(135deg, #1e293b, #334155);
+}
+
+/* BACK (revealed) */
+.card-back {
+  background: white;
+  color: black;
+  transform: rotateY(180deg);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card-back img {
+   width: 80%;
+  height: 80%;
+  object-fit: contain;
+  
+}
+
+/* IMAGE inside card */
+.card-front img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.card-front {
+  background:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reload {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.reload-content{
+  background: #0b1a5e;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  text-align: center;
+}
+
+.reload button{
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.reviews {
+  padding: 5px;
+}
+
+.review {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.text p {
+  margin: 2px 0;
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.popup {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* dark background */
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+.popup-content h3,
+.popup-content h2,
+.popup-content h5,
+.popup-content p {
+  color: blue;
+}
+
+
+.popup-content button {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgb(31, 8, 134);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.highlight {
+  color: red
+
+}
+
+.result-img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.Try-again {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* dark background */
+  justify-content: center;
+  align-items: center;
+}
+
+.Try-again-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.Try-again-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.Try-again-content p {
+  color: blue;
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+  @media (max-width: 600px) {
+  .grid {
+    gap: 5px;
+    padding: 20px 10px 20px 60px;
+    align-items: center;
+  }
+}
+
+  @media (max-width: 600px) {
+  .card {
+    max-width: 130px;
+    width: 100%;
+  }
+}
