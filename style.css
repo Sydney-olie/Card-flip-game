@@ -20,8 +20,8 @@ body {
   padding: 15px 20px;
   font-size: 20px;
    width: 100%;
-  max-width: 600px;
-  margin: auto;
+
+
 }
 
 /* ✅ GRID: 3 columns, 3 rows */
@@ -246,21 +246,30 @@ body {
 @media (max-width: 600px) {
   body {
     width: 100%;
-    padding: 10px;
+    padding: 6px;
   }
 }
 
   @media (max-width: 600px) {
   .grid {
-    gap: 5px;
-    padding: 20px 10px 20px 60px;
+    gap: 10px;
+    padding: 1px 30px 50px 80px;
     align-items: center;
+    margin-top: 2px;
+    grid-template-columns: repeat(3, 100px);
   }
 }
 
   @media (max-width: 600px) {
   .card {
-    max-width: 130px;
-    width: 100%;
+    max-width: 90px;
+    width: 70%;
+    height: 100px;
   }
+}
+@media(max-width: 600px) {
+.header {
+   width: 100%;
+   padding: 10px 20px;
+}
 }

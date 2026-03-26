@@ -20,7 +20,7 @@ function flipCard(card) {
   const img = card.querySelector(".result-img");
 
   if (clickCount === 1) {
-    img.src = "WhatsApp image 2026-03-24 at 8.28.27 AM.jpeg"; // your BAD image
+    img.src = "bad.jpeg"; // your BAD image
     card.classList.add("flip");
 
     document.getElementById("Try-again").style.display = "flex";
@@ -30,7 +30,7 @@ function flipCard(card) {
 
    else if (clickCount === 2) {
 
-       img.src = "WhatsApp image 2026-03-24 at 8.28.26 AM (1).jpeg"; // your GOOD image
+       img.src = "good.jpeg"; // your GOOD image
     card.classList.add("flip");
       document.getElementById("popup").style.display = "flex";
     }
@@ -88,7 +88,37 @@ if (clickCount === 2) {
 
 document.getElementById("okBtn").addEventListener("click", function() {
   document.getElementById("reload").style.display = "none";
+
+  
 });
+function updateDate() {
+  const today = new Date();
+
+  const day = today.getDate();
+  const month = today.toLocaleString('default', { month: 'long' });
+
+  // Function to add "st", "nd", "rd", "th"
+  function getDaySuffix(day) {
+    if (day > 3 && day < 21) return "th";
+    switch (day % 10) {
+      case 1: return "st";
+      case 2: return "nd";
+      case 3: return "rd";
+      default: return "th";
+    }
+  }
+
+  const formattedDate = `${day}${getDaySuffix(day)} of ${month}`;
+
+  document.getElementById("date").textContent = formattedDate;
+}
+
+
+// Run immediately
+updateDate();
+
+
+
 
 
 
